@@ -1,4 +1,5 @@
 import { Typography } from 'antd';
+import './PageTitle.css';
 
 type PageTitleProps = {
   title: string;
@@ -7,12 +8,12 @@ type PageTitleProps = {
 
 export function PageTitle({ title, subtitle }: PageTitleProps) {
   return (
-    <div>
-      <Typography.Title level={2} style={{ margin: 0, color: '#fff' }}>
+    <div className="page-title">
+      <Typography.Title level={2} className="page-title__title">
         {title}
       </Typography.Title>
       {subtitle ? (
-        <Typography.Text style={{ color: '#d6e6ff' }}>{subtitle}</Typography.Text>
+        <Typography.Text className="page-title__subtitle">{subtitle}</Typography.Text>
       ) : null}
     </div>
   );

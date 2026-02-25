@@ -25,6 +25,11 @@ Feature-Sliced Design (FSD) layout so you can expand individual modules without 
 - `src/shared/ui` contains reusable UI primitives, like `PageTitle`.
 - Global styling lives under `src/styles` to mirror the folder conventions commonly used in FSD.
 
+## Форма и тестовые запросы
+- Главная страница (`src/pages/MainPage/MainPage.tsx`) рендерит форму Ant Design с одним полем «Тема», валидация проводится через `yup`, а отправка вызывает `submitLaunchNote`, который делает `POST /posts`.
+- Кнопка «Отправить заметку» показывает состояние запроса (обновление GET /posts/1 или отправка POST /posts) и блокируется, пока выполняется синхронизация.
+- Секция «Тестовые запросы» документирует используемые эндпойнты (`GET /posts/1` и `POST /posts`) и позволяет использовать их как референс при интеграции с настоящим сервером.
+
 ## Scripts
 - `npm install` — install dependencies and generate `package-lock.json`.
 - `npm run dev` — start the Vite dev server on http://localhost:5173.
