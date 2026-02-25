@@ -33,9 +33,30 @@ body {
   padding: 2rem 1.5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .app-card {
   width: min(520px, 100%);
+}
+
+.app-card--wide {
+  width: min(980px, 100%);
+}
+
+.app-card__header {
+  width: 100%;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.table-container {
+  min-height: 280px;
+}
+
+.table-loader {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
